@@ -128,11 +128,11 @@ class Note extends FlxSprite
 		if (((CharactersWithNMI.contains(PlayState.SONG.player2) && !musthit) || ((CharactersWithNMI.contains(PlayState.SONG.player1)
 				|| CharactersWithNMI.contains(PlayState.characteroverride) || CharactersWithNMI.contains(PlayState.formoverride)) && musthit))
 				|| ((CharactersWithNMI.contains(PlayState.SONG.player2) || CharactersWithNMI.contains(PlayState.SONG.player1)) && ((this.strumTime / 50) % 20 > 10)))
-				&& this.noteStyle == 'normal')
 		{
 			this.noteStyle = 'NMI';
 			notePathLol = 'notes/NOTE_assets_NMI';
 		}
+
 		switch (noteStyle)
 		{
 			case 'phone':
