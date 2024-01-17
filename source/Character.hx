@@ -2404,10 +2404,15 @@ class Character extends FlxSprite
 
 			case 'tails':
 				frames = Paths.getSparrowAtlas('characters/Tails');
-				animation.addByPrefix('idle',  'idle instance', 24, false);
-				for (anim in ['left', 'down', 'up', 'right']) {
-					animation.addByPrefix('sing${anim.toUpperCase()}', '$anim instance', 24, false);
-				}
+				animation.addByPrefix('idle',  'Tails Idle', 24, false);
+				animation.addByPrefix('singLEFT', 'Tails Right0', 24, false);
+				animation.addByPrefix('singDOWN', 'Tails Down0', 24, false);
+				animation.addByPrefix('singUP', 'Tails Up0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Tails Left0', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Tails Right MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Tails Downb MISS', 24, false);
+				animation.addByPrefix('singUPmiss', 'Tails Up MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Tails Left MISS', 24, false);
 				globalOffset = [0, 0];
 
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
