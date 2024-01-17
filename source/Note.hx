@@ -129,6 +129,8 @@ class Note extends FlxSprite
 				notePathLol = 'notes/NOTE_phone';
 			case 'shape':
 				notePathLol = 'notes/NOTE_assets_Shape';
+			case 'NMI':
+				notePathLol = 'notes/NOTE_assets_NMI';
 		}
 		switch (PlayState.SONG.song.toLowerCase())
 		{
@@ -194,6 +196,28 @@ class Note extends FlxSprite
 				animation.addByPrefix('emeraldhold', 'emerald hold piece');
 				animation.addByPrefix('lightredhold', 'lightred hold piece');
 	
+				setGraphicSize(Std.int(width * noteSize));
+				updateHitbox();
+				antialiasing = noteStyle != '3D';
+
+			case 'NMI':
+				frames = Paths.getSparrowAtlas(notePathLol, 'shared');
+
+				animation.addByPrefix('greenScroll', 'green0');
+				animation.addByPrefix('redScroll', 'red0');
+				animation.addByPrefix('blueScroll', 'blue0');
+				animation.addByPrefix('purpleScroll', 'purple0');
+
+				animation.addByPrefix('purpleholdend', 'pruple end hold');
+				animation.addByPrefix('greenholdend', 'green hold end');
+				animation.addByPrefix('redholdend', 'red hold end');
+				animation.addByPrefix('blueholdend', 'blue hold end');
+				animation.addByPrefix('purplehold', 'purple hold piece');
+
+				animation.addByPrefix('greenhold', 'green hold piece');
+				animation.addByPrefix('redhold', 'red hold piece');
+				animation.addByPrefix('bluehold', 'blue hold piece');
+
 				setGraphicSize(Std.int(width * noteSize));
 				updateHitbox();
 				antialiasing = noteStyle != '3D';
