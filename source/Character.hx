@@ -2419,7 +2419,7 @@ class Character extends FlxSprite
 
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 
-				barColor = FlxColor.fromRGB(161, 161, 161);
+				barColor = FlxColor.fromRGB(255, 185, 65);
 
 				setGraphicSize(Std.int(width / furiosityScale));
 				updateHitbox();
