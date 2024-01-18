@@ -2826,15 +2826,15 @@ class PlayState extends MusicBeatState
 				stageName = 'black';
 
 				var preto:BGSprite = new BGSprite('preto', -560, -300, Paths.image('backgrounds/innocence_bg_1'), null);
-                                preto.setGraphicSize(Std.int(preto.width * 1.1));
+                                preto.setGraphicSize(Std.int(preto.width * 1.2));
 				sprites.add(preto);
 				add(preto);
 				var chaum:BGSprite = new BGSprite('chaum', -650, 600, Paths.image('backgrounds/Ilustracion8'), null);
-                                chaum.setGraphicSize(Std.int(chaum.width * 0.9));
+                                chaum.setGraphicSize(Std.int(chaum.width * 1.1));
 				sprites.add(chaum);
 				add(chaum);
 				var chaum2:BGSprite = new BGSprite('chaum2', -650, 600, Paths.image('backgrounds/Floor'), null);
-                                chaum2.setGraphicSize(Std.int(chaum2.width * 0.9));
+                                chaum2.setGraphicSize(Std.int(chaum2.width * 1.1));
 				sprites.add(chaum2);
 				add(chaum2);
 			default:
