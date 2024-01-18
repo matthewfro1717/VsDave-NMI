@@ -2398,8 +2398,10 @@ class Character extends FlxSprite
 				setGraphicSize(Std.int(width / furiosityScale));
 				updateHitbox();
 				antialiasing = false;
+
+				flipX = true;
 		
-				playAnim('danceRight');
+				playAnim('idle');
 
 
 			case 'tails':
@@ -2413,7 +2415,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWNmiss', 'Tails Downb MISS', 24, false);
 				animation.addByPrefix('singUPmiss', 'Tails Up MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'Tails Left MISS', 24, false);
-				globalOffset = [0, 0];
+				globalOffset = [80, 350];
 
 				loadOffsetFile(curCharacter + (isPlayer ? '-playable' : ''));
 
